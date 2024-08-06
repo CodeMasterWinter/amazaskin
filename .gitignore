@@ -1,0 +1,7 @@
+.idea/
+ProjectAmaza/__pycache__/
+virtual/
+db.sqlite3
+ProjectAmaza/Scripts/__pycache__/
+ProjectAmaza/migrations/__pycache__/
+ProjectAmaza/migrations
