@@ -1,0 +1,167 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+
+    <!-- CDNs -->
+    <script src="https://kit.fontawesome.com/f8dced6eec.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- css -->
+    <link rel="stylesheet" href="{% static 'amazaskin/landing.css' %}">
+    <title>{{page_title}} - amazaskin</title>
+</head>
+<div id="splash">
+    <div class="splash-loader">
+        <h3 id="splash-logo">amaza<span>SKIN</span></h3>
+    </div>
+</div>
+<body>
+    <header id="header">
+        <div class="container-fluid header-container">
+            <nav>
+                <h3 class="nav-logo">amaza<span>SKIN</span></h3>
+                <ul class="nav-list"></ul>
+                <div class="nav-actions">
+                    {% if user.is_authenticated %}
+                    {% endif %}
+                    <a class="nav-action cart-action">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                    </a>
+                    <a class="nav-action search-action">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </a>
+                    <a class="nav-action menu-action">
+                        <i class="fa-solid fa-bars"></i>
+                    </a>
+                </div>
+            </nav>
+            <div class="header-content">
+                <div class="header-text">
+                    <h3 class="header-title">
+                        treat your body
+                    </h3>
+                    <p class="header-tagline">
+                        <span>all-natural</span>, <span>cruelty-free</span><br>
+                        skincare to rejuvenate your skin.
+                    </p>
+                </div>
+                <div id="header-carousel" class="carousel slide carousel-fade"  data-bs-ride="carousel">               
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="carousel-img">
+                                <img src="{% static 'amazaskin/images/temp-carousel/shea.jpg' %}" alt="">
+                            </div>
+                            <div class="carousel-info">
+                                <div class="carousel-text">
+                                    <p class="carousel-product">Shea Butter</p>
+                                    <p class="carousel-size">300ml</p>
+                                    <p class="carousel-price">R360</p>
+                                </div>
+                                <a href="/" class="header-cart-link">
+                                    <i class="fa-solid fa-bag-shopping"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="carousel-img">
+                                <img src="{% static 'amazaskin/images/temp-carousel/serum.jpg' %}" alt="">
+                            </div>
+                            <div class="carousel-info">
+                                <div class="carousel-text">
+                                    <p class="carousel-product">Skin Brightening Serum</p>
+                                    <p class="carousel-size">30ml</p>
+                                    <p class="carousel-price">R108</p>
+                                </div>
+                                <a href="/" class="header-cart-link">
+                                    <i class="fa-solid fa-bag-shopping"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="carousel-img">
+                                <img src="{% static 'amazaskin/images/temp-carousel/sunscreen.jpg' %}" alt="">
+                            </div>
+                            <div class="carousel-info">
+                                <div class="carousel-text">
+                                    <p class="carousel-product">Repairing Sunscreen</p>
+                                    <p class="carousel-size">100ml</p>
+                                    <p class="carousel-price">R360</p>
+                                </div>
+                                <a href="/" class="header-cart-link">
+                                    <i class="fa-solid fa-bag-shopping"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a id="header-shop-link" href="/">shop the range</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- GSAP -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <!-- Splash Timeline -->
+    <script>
+        // splash timeline
+        const splash = document.querySelector('#splash')
+        const splash_logo = document.querySelector('#splash-logo')
+
+        // Master Timeline
+        const splash_sequence = gsap.timeline();
+        
+        const setSplashStates = () => {
+
+            gsap.set(splash_logo, {
+                yPercent: 0
+            });
+
+            gsap.set(splash, {
+                yPercent: 0
+            });
+
+        }
+
+        const splashAnimation = () => {
+            const splash_timeline = gsap.timeline({
+                defaults: {
+                    ease: 'power2.inOut',
+                }
+            });
+
+            splash_timeline.to(splash_logo, {
+                yPercent: 0,
+                duration: 3,
+            })
+            
+            .to(splash_logo, {
+                yPercent: -100,
+            })
+
+            .to(splash, {
+                yPercent: -100,
+                duration: 1.5
+            })
+
+            return splash_timeline
+        };
+
+        splash_sequence
+        .add(setSplashStates())
+        .add(splashAnimation())
+    </script>
+</body>
+</html>

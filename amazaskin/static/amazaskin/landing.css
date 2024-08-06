@@ -1,0 +1,288 @@
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+:root {
+    --buff: #cfa18a;
+    --char: #252525;
+    --isabelline: #f6f4f1;
+    --buff-shadow: #be917b;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lexend';
+}
+
+#splash {
+    top: 0;
+    left: 0;
+    z-index: 9;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background: var(--buff);
+}
+
+.splash-loader {
+    top: 50%;
+    left: 50%;
+    z-index: 10;
+    position: fixed;
+    overflow: hidden;
+    transform: translate(-50%, -50%);
+}
+
+#splash-logo {
+    font-size: 2rem;
+    color: var(--isabelline);
+    animation: fade 1s ease;
+}
+
+#splash-logo span {
+    font-weight: 700;
+}
+
+header {
+    height: 100%;
+    background: url(images/header-bg.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.header-container {
+    padding: 0;
+    height: 100%;
+    background-color: #0000004f;
+}
+
+nav {
+    height: 4rem;
+    display: flex;
+    padding-inline: 1rem;
+    background-color: var(--buff);
+    justify-content: space-between;
+}
+
+.nav-list {
+    display: none;
+}
+
+.nav-logo {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    color: var(--isabelline);
+}
+
+.nav-logo span {
+    font-weight: 700;
+}
+
+.nav-action {
+    height: 100%;
+    border: none;
+    display: grid;
+    cursor: pointer;
+    place-content: center;
+    text-decoration: none;
+}
+
+.menu-action {
+    margin-top: 2px;
+}
+
+.nav-actions {
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-action i {
+    font-size: 1.4rem;
+    color: var(--isabelline);
+}
+
+.header-content {
+    display: flex;
+    padding-inline: 16px;
+    flex-direction: column;
+}
+
+.header-text {
+    margin-block: 2rem;
+    text-align: center;
+}
+
+.header-title {
+    font-size: 2.4rem;
+    color: var(--isabelline);
+}
+
+.header-tagline {
+    margin: 0;
+    font-weight: 600;
+    color: var(--isabelline);
+}
+
+.header-tagline span{
+    color: var(--buff);
+}
+
+#header-carousel {
+    height: 20rem;
+    background: rgba(255, 255, 255, 0.21);
+    border-radius: 8px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(7.7px);
+    -webkit-backdrop-filter: blur(7.7px);
+}
+
+.carousel-inner {
+    height: 100%;
+    padding: 16px;
+    border-radius: 12px;
+}
+
+.carousel-item {
+    height: 100%;
+    border-radius: 4px;
+}
+
+#header-shop-link {
+    width: 100%;
+    font-weight: 600;
+    border-radius: 4px;
+    margin-block: 24px;
+    text-align: center;
+    padding-block: 12px;
+    display: inline-block;
+    text-decoration: none;
+    color: var(--isabelline);
+    background-color: var(--buff);
+    border: 4px solid transparent;
+    transition: .3s ease background-color, .3s ease border-color;
+}
+
+#header-shop-link:active {
+    border-color: var(--buff);
+    background-color: transparent;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-img {
+    height: 65%;
+    border-radius: 4px;
+}
+
+.carousel-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.carousel-info {
+    height: 35%;
+    display: flex;
+    padding-block: 12px;
+    align-items: center;
+}
+
+.carousel-text {
+    width: 80%;
+}
+
+.carousel-price, .carousel-product, .carousel-size{
+    margin: 0;
+    color: var(--isabelline);
+}
+
+.carousel-product {
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.carousel-size {
+    font-weight: 600;
+}
+
+.carousel-price {
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: var(--buff);
+}
+
+.header-cart-link {
+    width: 3rem;
+    height: 3rem;
+    display: grid;
+    font-size: 1.4rem;
+    border-radius: 50%;
+    place-content: center;
+    color: var(--isabelline);
+    background-color: var(--buff);
+}
+
+/* Smaller mobile screens */
+@media screen and (max-height: 759px) {
+    header {
+        height: 100dvh;
+    }
+
+    .header-content {
+        height: calc(100% - 4rem);
+    }
+
+    .header-text {
+        margin-block: 1.6rem;
+    }
+
+    .header-title {
+        font-size: 2rem;
+    }
+
+    #header-carousel {
+        height: 45%;
+    }
+
+    .carousel-img {
+        height: 60%;
+    }
+
+    .carousel-info {
+        height: 40%;
+        padding-block: 8px;
+    }
+}
+
+/* Tablet Portrait */
+@media screen and (min-width: 429px) and (max-width: 810px) {
+    
+}
+
+/* Tablet - Landscape */
+@media screen and (min-width: 811px) and (max-width: 1080px) {
+
+}
+
+/* Laptop */
+
+@media screen and (min-width: 1081px) and (max-width: 1366px) {
+    
+}
+
+/* Desktop */
+
+@media screen and (min-width: 1367px){
+    
+}
