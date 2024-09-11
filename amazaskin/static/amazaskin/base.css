@@ -1,0 +1,155 @@
+:root {
+    --buff: #cfa18a;
+    --char: #252525;
+    --isabelline: #f6f4f1;
+    --wisteria: #c3b1e1;
+    --sage: #b4e882;
+    --buff-shadow: #be917b;
+}
+
+@font-face {
+    font-family: 'Breathing';
+    src: url('./fonts/Breathing/Breathing.woff2') format('woff2'),
+         url('./fonts/Breathing/Breathing.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'DM Sans', 'Lexend';
+}
+
+body {
+    background-color: var(--isabelline);
+}
+
+nav {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4rem;
+    display: flex;
+    position: absolute;
+    justify-content: space-between;
+}
+
+.nav-logo {
+    width: 15%;
+    height: 100%;
+    fill: var(--char);
+}
+
+.nav-logo span {
+    font-family: 'Breathing';
+}
+
+.nav-list {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+.nav-item {
+    height: min-content;
+    margin-inline: .5rem;
+}
+
+.nav-link {
+    position: relative;
+    color: var(--char);
+    text-decoration: none;
+    font-family: 'DM Sans', 'Lexend';
+}
+
+.nav-link::after {
+    left: 50%;
+    right: 50%;
+    width: 0;
+    height: 0;
+    content: '';
+    bottom: -4px;
+    border-radius: 50%;
+    position: absolute;
+    transition: width .3s ease, height .3s ease;
+    background-color: var(--buff);
+}
+
+.nav-link:hover::after {
+    width: 6px;
+    height: 6px;
+}
+
+.header-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.nav-actions {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style: none;
+    align-items: center;
+    margin-inline-end: 1rem;
+}
+
+.nav-action {
+    position: relative;
+    margin-inline: 1rem;
+}
+
+.nav-action-link {
+    color: var(--char);
+    text-decoration: none;
+}
+
+.sub-nav-actions {
+    right: -1rem;
+    margin: 0;
+    top: 1.5rem;
+    z-index: 9;
+    opacity: 0;
+    padding: .6rem;
+    min-width: 13rem;
+    list-style: none;
+    position: absolute;
+    border-radius: 5px;
+    visibility: hidden;
+    transition: opacity .3s ease;
+    background-color: var(--isabelline);
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.sub-nav-action a {
+    padding: 1rem;
+    display: block;
+    color: var(--char);
+    margin-block: 5px;
+    text-decoration: none;
+    font-family: 'DM Sans', 'Lexend';
+}
+
+.sub-nav-action a:hover {
+    background-color: #cfa18a30;
+}
+
+.nav-action:hover .sub-nav-actions{
+    opacity: 1;
+    visibility: visible;
+}
+
+.menu-action {
+    display: none;
+}
+
+@media screen and (min-width: 240px) and (max-width: 428px) {
+    .menu-action {
+        display: block;
+    }
+}

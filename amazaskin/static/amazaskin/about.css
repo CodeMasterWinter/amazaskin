@@ -1,0 +1,28 @@
+:root {
+    --buff: #cfa18a;
+    --char: #252525;
+    --isabelline: #f6f4f1;
+    --wisteria: #c3b1e1;
+    --sage: #b4e882;
+    --buff-shadow: #be917b;
+}
+
+header {
+    height: 100vh;
+}
+
+.header-container {
+    height: 100%;
+    padding: 0;
+}
+
+.header-content {
+    height: 100%;
+    display: flex;
+}
+
+.header-text {
+    width: 50%;
+    height: 100%;
+    background-color: var(--buff);
+}
