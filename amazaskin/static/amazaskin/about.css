@@ -1,10 +1,20 @@
 :root {
-    --buff: #cfa18a;
+    --buff: #DEAC97;
     --char: #252525;
     --isabelline: #f6f4f1;
     --wisteria: #c3b1e1;
     --sage: #b4e882;
     --buff-shadow: #be917b;
+}
+
+.nav-list {
+    left: 14rem;
+    height: 100%;
+    position: absolute;
+}
+
+.nav-link::after {
+    background-color: var(--isabelline);
 }
 
 header {
@@ -21,8 +31,34 @@ header {
     display: flex;
 }
 
-.header-text {
+.header-content:first-child {
     width: 50%;
     height: 100%;
     background-color: var(--buff);
+}
+
+.header-title {
+    position: relative;
+    color: var(--isabelline);
+    font-family: 'Lexend';
+}
+
+.header-title::after {
+    content: 'skin';
+    position: absolute;
+    font-family: 'Breathing';
+}
+
+.header-img {
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    background: url(images/about-header.png) center no-repeat;
+    background-size: cover;
+}
+
+.header-img img {
+    width: 100%;
+    height: 100%;
 }
