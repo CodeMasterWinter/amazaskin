@@ -1,0 +1,34 @@
+{% load static %}
+
+<nav>
+    <div class="container-xxl nav-container">
+        <img src="{% static 'img/logo.png' %}" alt="amazaskin logo">
+
+        <ul>
+            <li class="mx-2">
+                <a href="http://">Home</a>
+            </li>
+            <li class="mx-2">
+                <a href="http://">Shop</a>
+            </li>
+            <li class="mx-2">
+                <a href="http://">Our Story</a>
+            </li> 
+            <li class="mx-2">
+                <a href="http://">Contact</a>
+            </li>
+        </ul>
+
+        <div class="nav-icons">
+            <button class="nav-button">
+                <ion-icon class="mx-2" name="bag-handle-outline"></ion-icon>
+            </button>
+            <button class="nav-button">
+                <ion-icon class="mx-2" name="person-circle-outline"></ion-icon>
+            </button>
+            <button class="nav-button" id="nav-menu">
+                <ion-icon class="mx-2" name="menu-outline"></ion-icon>
+            </button>
+        </div>
+    </div>
+</nav>
