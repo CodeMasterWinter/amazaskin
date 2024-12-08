@@ -4,7 +4,7 @@
 
 html {
     height: 100vh;
-    /* background-color: #fff2e6; */
+    background-color: #fff2e6;
 }
 
 nav {
@@ -16,7 +16,7 @@ nav {
 }
 
 nav.expanded {
-    height: 100vh;
+    height: 96vh;
 }
 
 .nav-container {
@@ -45,7 +45,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #1e1e1e;
+    color: #fff2e6;
     /* font-weight: 500; */
     text-decoration: none;
 }
