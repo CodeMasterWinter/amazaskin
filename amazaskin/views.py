@@ -4,8 +4,10 @@ from .models import Product
 # Create your views here.
 def shop(request):
 
-
+    products = Product.objects.all()
+    
     context = {
+        'products': products,
         'page_title': "Shop the Range",
     }
 

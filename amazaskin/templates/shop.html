@@ -7,35 +7,33 @@
 
 {% block content %}
     <section id="shop">
-        <div class="container-xxl shop-container">
+        <div class="container-fluid shop-container">
             <div class="shop-header">
                 <h1>Shop</h1>
                 <p>Shop The Range</p>
             </div>
         </div>
         <section id="products">
-            <div class="container-xxl product-grid">
-                <div class="col product-col">
-                    
-                </div>
-                <div class="col product-col">
-
-                </div>
-                <div class="col product-col">
-
-                </div>
-                <div class="col product-col">
-
-                </div>
-                <div class="col product-col">
-
-                </div>
-                <div class="col product-col">
-
-                </div>
-                <div class="col product-col">
-
-                </div>
+            <div class="container-fluid product-grid">
+                {% for product in products %}
+                    <div class="product-card">
+                        <div class="product-img">
+                            <a href="#">
+                                <img src="{{ product.image.url}}" loading="lazy">
+                            </a>
+                        </div>
+                        <div class="product-info">
+                            <h4>{{product.name}}</h4>
+                            <p>{{product.description}}</p>
+                        </div>
+                        <div class="product-buttons">
+                            <span>R{{product.price}}</span>
+                            <a href="#">
+                                <ion-icon name="bag"></ion-icon>
+                            </a>
+                        </div>
+                    </div>
+                {% endfor %}
             </div>
         </section>
     </section>
