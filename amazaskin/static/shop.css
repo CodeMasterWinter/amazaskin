@@ -1,0 +1,17 @@
+.shop-header {
+    padding: 1rem;
+}
+
+.product-grid {
+    gap: 1rem;
+    display: grid;
+    padding: 0 3rem;
+    grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+}
+
+.product-col {
+    height: 24rem;
+    border-radius: 8px;
+    background-color: #ffffff;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}

@@ -1,8 +1,9 @@
 from django.shortcuts import render
-
+from .models import Product
 
 # Create your views here.
 def shop(request):
+
 
     context = {
         'page_title': "Shop the Range",
