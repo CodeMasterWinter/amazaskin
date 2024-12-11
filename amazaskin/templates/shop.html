@@ -23,14 +23,20 @@
                             </a>
                         </div>
                         <div class="product-info">
-                            <h4>{{product.name}}</h4>
-                        </div>
-                        <div class="product-buttons">
-                            <span>R{{product.price}}</span>
-                            <a href="#">
-                                <ion-icon name="bag"></ion-icon>
-                                <span>Add to Cart</span>
-                            </a>
+                            <h5>{{product.name}}</h5>
+                            <p>
+                                <ion-icon name="star"></ion-icon>
+                                <ion-icon name="star"></ion-icon>
+                                <ion-icon name="star"></ion-icon>
+                                <ion-icon name="star"></ion-icon>
+                                <ion-icon name="star"></ion-icon>
+                            </p>
+                            <div class="product-buttons">
+                                <span>R{{product.price}}</span>
+                                <a href="#">
+                                    <ion-icon name="bag"></ion-icon>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 {% endfor %}
