@@ -70,13 +70,16 @@
     width: 2.4rem;
     height: 2.4rem;
     color: #ffffff;
-    border-radius: 50%;
+    border-radius: 2rem;
     place-content: center;
     background-color: #B5C1B3;
-    transition: width .3s ease, border-radius .3s ease;
+    transition: width .3s ease;
 }
 
 .product-buttons a:hover {
     width: 60%;
-    border-radius: 2rem;
+}
+
+.product-buttons a:active {
+    background-color: #9dac9b;
 }
