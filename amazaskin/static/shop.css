@@ -3,9 +3,8 @@
 }
 
 .product-grid {
-    gap: .75rem;
+    gap: 2rem .75rem;
     display: grid;
-    row-gap: 2rem;
     grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
 }
 
