@@ -2,7 +2,21 @@
     padding: 1rem;
 }
 
+.product-container {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.product-container aside {
+    flex: .2;
+    border-radius: 4px;
+    margin-right: 1rem;
+    border: 1px solid #2e2e2e;
+}
+
 .product-grid {
+    flex: .8;
     gap: 2rem .75rem;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));

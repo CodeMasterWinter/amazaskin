@@ -14,8 +14,12 @@
             </div>
         </div>
         <section id="products">
-            <div class="container-fluid product-grid">
-                {% for product in products %}
+            <div class="container-fluid product-container">
+                <aside>
+                    
+                </aside>
+                <div class="product-grid">
+                    {% for product in products %}
                     <div class="product-card">
                         <div class="product-img">
                             <a href="#">
@@ -40,6 +44,7 @@
                         </div>
                     </div>
                 {% endfor %}
+                </div>
             </div>
         </section>
     </section>
