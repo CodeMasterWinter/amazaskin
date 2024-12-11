@@ -18,7 +18,7 @@
 
 .product-img {
     width: 100%;
-    height: 60%;
+    height: 70%;
     overflow: hidden;
     border-radius: 6px;
 }
@@ -47,11 +47,6 @@
     color: #edc9bb;
 }
 
-.product-info p {
-    margin: 0;
-    font-size: .9rem;
-}
-
 .product-buttons {
     display: flex;
     padding: .5rem .3rem;
@@ -66,12 +61,14 @@
 }
 
 .product-buttons a {
-    display: grid;
+    display: flex;
     width: 2.4rem;
     height: 2.4rem;
     color: #ffffff;
     border-radius: 2rem;
-    place-content: center;
+    align-items: center;
+    text-decoration: none;
+    justify-content: center;
     background-color: #B5C1B3;
     transition: width .3s ease;
 }
