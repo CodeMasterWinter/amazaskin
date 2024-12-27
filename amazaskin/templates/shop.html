@@ -12,40 +12,40 @@
                 <h1>Shop</h1>
                 <p>Shop The Range</p>
             </div>
-        </div>
-        <section id="products">
-            <div class="container-fluid product-container">
-                <aside>
-                    
-                </aside>
-                <div class="product-grid">
-                    {% for product in products %}
-                    <div class="product-card">
-                        <div class="product-img">
-                            <a href="#">
-                                <img src="{{ product.image.url}}" loading="lazy">
-                            </a>
-                        </div>
-                        <div class="product-info">
-                            <h5>{{product.name}}</h5>
-                            <p>
-                                <ion-icon name="star"></ion-icon>
-                                <ion-icon name="star"></ion-icon>
-                                <ion-icon name="star"></ion-icon>
-                                <ion-icon name="star"></ion-icon>
-                                <ion-icon name="star"></ion-icon>
-                            </p>
-                            <div class="product-buttons">
-                                <span>R{{product.price}}</span>
+            <section id="products">
+                <div class="container-fluid product-container">
+                    <aside>
+                        
+                    </aside>
+                    <div class="product-grid">
+                        {% for product in products %}
+                        <div class="product-card">
+                            <div class="product-img">
                                 <a href="#">
-                                    <ion-icon name="bag"></ion-icon>
+                                    <img src="{{ product.image.url}}" loading="lazy">
                                 </a>
                             </div>
+                            <div class="product-info">
+                                <h5>{{product.name}}</h5>
+                                <p>
+                                    <ion-icon name="star"></ion-icon>
+                                    <ion-icon name="star"></ion-icon>
+                                    <ion-icon name="star"></ion-icon>
+                                    <ion-icon name="star"></ion-icon>
+                                    <ion-icon name="star"></ion-icon>
+                                </p>
+                                <div class="product-buttons">
+                                    <span>R{{product.price}}</span>
+                                    <a href="#">
+                                        <ion-icon name="bag"></ion-icon>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
+                    {% endfor %}
                     </div>
-                {% endfor %}
                 </div>
-            </div>
-        </section>
+            </section>
+        </div>
     </section>
 {% endblock content %}
