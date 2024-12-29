@@ -2,11 +2,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Instrument Sans', 'Lexend Deca';
+    font-family: 'Instrument Sans', 'Afacad Flux', 'Lexend Deca';
 }
 
 body {
     height: 100vh;
+    background-color: #fdfaf1;
 }
 
 nav {
@@ -47,8 +48,8 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #ffffff;
-    /* font-weight: 500; */
+    color: #fdfaf1;
+    font-weight: 500;
     text-decoration: none;
 }
 
@@ -60,7 +61,13 @@ nav ul li a {
 .nav-button {
     border: none;
     display: grid;
-    color: #1e1e1e;
+    color: #fdfaf1;
     background: none;
     place-content: center;
+    transition: color .5s ease, transform .5s ease;
+}
+
+.nav-button:hover {
+    color: #ffffff;
+    transform: scale(1.1);
 }
